@@ -12,25 +12,25 @@
 
 #include "get_next_line.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	char	*ptr;
-	char	ch;
+// char	*ft_strchr(const char *s, int c)
+// {
+// 	char	*ptr;
+// 	char	ch;
 
-	if (!s)
-		return (NULL);
-	ptr = (char *)s;
-	ch = (char)c;
-	while (*ptr)
-	{
-		if (*ptr == ch)
-			return (ptr);
-		ptr++;
-	}
-	if (*ptr == ch)
-		return (ptr);
-	return (NULL);
-}
+// 	if (!s)
+// 		return (NULL);
+// 	ptr = (char *)s;
+// 	ch = (char)c;
+// 	while (*ptr)
+// 	{
+// 		if (*ptr == ch)
+// 			return (ptr);
+// 		ptr++;
+// 	}
+// 	if (*ptr == ch)
+// 		return (ptr);
+// 	return (NULL);
+// }
 
 // size_t	ft_strlen(const char *str)
 // {

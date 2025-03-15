@@ -1,17 +1,17 @@
-NAME = gnl
+NAME = gnl.a
 SRCS = get_next_line.c get_next_line_utils.c
 OBJS = $(SRCS:.c=.o)
 LIBFT = ../libft/libft.a
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $^ $(CFLAGS) -o $@ $(LIBFT)
+	ar rc $(NAME) $(OBJS)
 
-$(OBJS): $(SRCS)
-	$(CC) $(CFLAGS) -c $< -o $@ $(LIBFT)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
